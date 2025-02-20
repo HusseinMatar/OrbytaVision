@@ -343,6 +343,22 @@ html {
         font-weight: bold;
     }
 
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller title */
+        -webkit-text-stroke: 1px black; /* Reduce outline */
+        text-shadow: 
+            2px 2px 6px rgba(0, 0, 0, 0.7), 
+            -2px -2px 6px rgba(0, 0, 0, 0.7); /* Adjust shadow */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Smaller subtitle */
+        -webkit-text-stroke: 0.5px black; /* Reduce outline */
+        text-shadow: 
+            1px 1px 5px rgba(0, 0, 0, 0.7), 
+            -1px -1px 5px rgba(0, 0, 0, 0.7); /* Adjust shadow */
+    }
+
     /* 🎥 Ensure Videos Stay Below Navbar */
     .planet-section {
         width: 100%;
