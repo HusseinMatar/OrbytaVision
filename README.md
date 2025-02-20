@@ -14,7 +14,10 @@
 Originally, this project was designed using **beautiful HD space videos** to enhance the visual experience. However, due to:
 - **GitHub's 100MB file size limit**, 
 - **Performance optimization for mobile users**, and
-- **Faster loading times**,  
+- **Faster loading times**,
+  
+## 📹 Screen Recording of Past Project
+https://drive.google.com/file/d/1PQRKTyh6A2tggEscyxw_0I3AnaBJAWD9/view?usp=sharing
 
 the videos were substituted with **high-quality images** while keeping the immersive experience intact.
 
