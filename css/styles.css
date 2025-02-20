@@ -1,0 +1,417 @@
+/* 🌌 NAVIGATION BAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: space-between; /* Creates space between logo and links */
+    padding: 30px 40px; /* Adjusted padding */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+/* 🌟 Logo */
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #F8F8F8;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+/* 🌍 Navbar Container */
+.nav-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px; /* Adds space so Neptune doesn’t get cut */
+
+}
+
+/* 🔹 Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Ensures even spacing between planets */
+    padding: 0;
+    margin: 0;
+    max-width: 75%; /* Prevents planets from stretching too much */
+}
+
+/* 🔹 Navigation Links Styling */
+.nav-links li {
+    display: inline;
+}
+
+/* 🔥 Default Navbar Link Styling */
+.nav-links a {
+    text-decoration: none;
+    color: #F8F8F8;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out, background-color 0.3s;
+}
+
+/* 🌟 Highlight the Selected Planet */
+body:has(#sun:target) .nav-links a[href="#sun"],
+body:has(#mercury:target) .nav-links a[href="#mercury"],
+body:has(#venus:target) .nav-links a[href="#venus"],
+body:has(#earth:target) .nav-links a[href="#earth"],
+body:has(#mars:target) .nav-links a[href="#mars"],
+body:has(#jupiter:target) .nav-links a[href="#jupiter"],
+body:has(#saturn:target) .nav-links a[href="#saturn"],
+body:has(#uranus:target) .nav-links a[href="#uranus"],
+body:has(#neptune:target) .nav-links a[href="#neptune"] {
+    background: white; /* Highlights selected planet */
+    color: #000814;
+    border-radius: 5px;
+}
+
+/* 🌠 Hover Effect */
+.nav-links a:hover {
+    color: #000814;
+    background: white;
+    border-radius: 5px;
+}
+
+/* 🌌 General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000814;
+    color: #E5E5E5;
+}
+
+/* 🌌 Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✨ Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%; /* Moves content down */
+    left: 50%; /* Moves content right */
+    transform: translate(-50%, -50%); /* Centers it exactly */
+    text-align: center; /* Ensures text is centered */
+    color: #ffffff; /* White text */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🌟 Title */
+.hero-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: black; /* Default text color */
+    
+    /* ✅ Text Stroke (Outline) */
+    -webkit-text-stroke: 1.5px black; /* Thin black outline */
+    
+    /* ✅ Strong Text Shadow for Contrast */
+    text-shadow: 
+        3px 3px 10px rgba(0, 0, 0, 0.9), /* Strong outer glow */
+        -3px -3px 10px rgba(0, 0, 0, 0.9); /* Adds more depth */
+
+    /* ✅ Neon Glow Effect */
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+/* 🔹 Subtitle */
+.hero-content p {
+    font-size: 1.5rem;
+    color: white; /* Default text color */
+    
+    /* ✅ Text Stroke (Outline) */
+    -webkit-text-stroke: 1px black; /* Thin black outline */
+    
+    /* ✅ Strong Text Shadow */
+    text-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.8), 
+        -2px -2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* 🔥 Neon Glow Animation */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.8), 
+            0 0 20px rgba(255, 255, 255, 0.6), 
+            0 0 30px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        text-shadow: 
+            0 0 15px rgba(255, 255, 255, 1), 
+            0 0 30px rgba(255, 255, 255, 0.8), 
+            0 0 45px rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* 🌍 Planet Sections */
+.planet-section {
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🌍 Planet Text Content */
+.planet-content {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    max-width: 600px;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif; /* Futuristic Font */
+    text-transform: uppercase;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); /* Glowing effect */
+
+    /* ✅ Fix: Set default opacity */
+    opacity: 1; /* Ensure text is visible initially */
+    transform: translateY(0); /* Fix position */
+
+    /* ✅ Apply animation */
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+/* 🌟 Styled Heading */
+.planet-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: glowText 2s infinite alternate;
+    text-shadow: 
+    3px 3px 10px rgba(0, 0, 0, 0.9), /* Strong outer glow */
+    -3px -3px 10px rgba(0, 0, 0, 0.9); /* Adds more depth */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.9); /* Outline stroke */
+}
+
+/* 🪐 Styled Paragraph */
+.planet-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #E5E5E5;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    text-shadow: 
+    2px 2px 8px rgba(0, 0, 0, 0.8), /* Adds glow */
+    -2px -2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* 🎥 Full-Screen Images */
+.full-screen-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage without distortion */
+    z-index: -1; /* Keeps image behind text */
+}
+
+
+/* 🌞 Text Overlay */
+.planet-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Prevents navbar from covering content */
+
+}
+
+/* 🌍 RESPONSIVE DESIGN */
+
+/* 🔹 Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navbar Adjustments */
+    .navbar {
+        flex-direction: column; /* Stack logo and links */
+        padding: 15px 20px;
+    }
+
+    .nav-container {
+        padding-right: 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Allow links to wrap */
+        justify-content: center;
+        max-width: 100%; /* Ensure spacing works */
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 3rem; /* Reduce heading size */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust subtitle */
+    }
+
+    /* Planet Sections */
+    .planet-content {
+        max-width: 80%; /* Make text block more readable */
+    }
+}
+
+/* 🔹 Mobile Phones (Up to 768px) */
+@media screen and (max-width: 768px) {
+    /* 🛰️ Make Navigation Fixed & Organized */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: black; /* Solid background for clarity */
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    /* 🌍 Arrange Planets into a Grid (3 per row) */
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1); /* Light transparent effect */
+        border-radius: 8px;
+        font-size: 0.9rem;
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* 🎯 Highlight Active Planet */
+    .nav-links a:focus,
+    .nav-links a:active {
+        background: white;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* 🎥 Ensure Videos Stay Below Navbar */
+    .planet-section {
+        width: 100%;
+        height: 100vh; /* Full screen height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column; /* Stack elements properly */
+        padding: 10px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* 🎥 Full-Width Videos */
+    .full-screen-video {
+        width: 100%;
+        height: 80vh; /* Adjusted for better spacing */
+        object-fit: cover;
+    }
+
+    /* 📝 Text Overlay on Video */
+    .planet-content {
+        position: absolute;
+        bottom: 20px; /* Move text closer to video */
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        padding: 15px;
+        border-radius: 10px;
+        width: 90%;
+        text-align: center;
+        color: white;
+    }
+
+    .planet-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .planet-content p {
+        font-size: 1rem;
+    }
+}
+
+.planet-link {
+    display: inline-block; /* Ensures it takes up space */
+    color: #ffffff; /* White */
+    margin-left: 8px; /* Space between text and icon */
+    font-size: 1.2rem; /* Bigger for easy clicks */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.planet-link i {
+    pointer-events: auto; /* Ensures the icon is clickable */
+    cursor: pointer;
+}
+
+.planet-link:hover {
+    color: yellow; /* Changes color on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+    background: black;
+}
