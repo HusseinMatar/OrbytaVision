@@ -403,6 +403,17 @@ html {
     }
 }
 
+@media screen and (max-width: 430px) {
+    .hero-content h1 {
+        font-size: 2rem !important; /* Force smaller size */
+        -webkit-text-stroke: 0.8px black; 
+    }
+
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+}
+
 .planet-link {
     display: inline-block; /* Ensures it takes up space */
     color: #ffffff; /* White */
